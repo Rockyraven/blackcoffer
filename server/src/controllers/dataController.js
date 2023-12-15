@@ -11,6 +11,7 @@ exports.getData = async (req, res) => {
         // }
 
         const data = await Data.find({}).limit(30);
+        console.log(data);
         res.json(data);
     } catch (error) {
         console.error(error);
